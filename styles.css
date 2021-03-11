@@ -1,6 +1,7 @@
 body {
     background-color: #1abc9c;
     font-size: 16px;
+    margin-top: 10rem;
 }
 
 .flex-wrap {
@@ -10,6 +11,11 @@ body {
     flex-wrap: wrap;
     height: 300px;
     text-align: center;
+
+    margin-top: 5rem;
+
+    border: 11px inset rgba(28,110,164,0.93);
+    border-radius: 25px 25px 25px 25px;
 }
 
 header > h1, .input-container {
@@ -44,13 +50,22 @@ header > h1, .input-container {
 }
 
 div > .container {
-
     margin-left: 10rem;
     display: flexbox;
     justify-content: center;
     align-items: center;
+    
+
+    border: 11px inset rgba(28,110,164,0.93);
+border-radius: 25px 25px 25px 25px;
 }
 
 #push-center {
     margin-right: 10rem;
 }
+
+/* .container {width: 20%; float:left;clear: right;margin:10px; border-radius: 5px;} */
+.sortable { list-style-type: none; margin:0; padding:2px; min-height:30px; border-radius: 5px;}
+.sortable li { margin: 3px 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px;}
+/* .sortable li span { position: absolute; margin-left: -1.3em; } */
+

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
     <title>Trello clone</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <h1>Trello clone</h1>
     </header>
 
-    <div class="input-container">
+    <div class="input-container container">
         <input type="text" class="text" value=""/>
         <input type="button" class="btn" name="" value="Add""/>
     </div>
@@ -22,21 +23,29 @@
 
     <div class="container">
     <h2>Todo</h2>
-        <ul>
+        <ul class="sortable">
             <li class="card">todo example</li>
         </ul>
     </div>
 
     <div class="container">
     <h2>Doing</h2>
-        <ul>
+        <ul class="sortable">
             <li class="card">todo example</li>
         </ul>
     </div>
 
+    
+    <div class="container">
+        <h2>Reviews</h2>
+            <ul class="sortable">
+                <li class="card">todo example</li>
+            </ul>
+        </div>
+
     <div class="container" id="push-center">
         <h2>Done</h2>
-            <ul>
+            <ul class="sortable">
                 <li class="card">todo example</li>
             </ul>
     </div>
