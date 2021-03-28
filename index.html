@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links -->
     <link rel="stylesheet" href="lib/Bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="lib/jQuery/jquery.ui.min.css" />
-    <link rel="stylesheet" href="/styles.css" />
-
+    <link rel="stylesheet" href="styling/styles.css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="/scripts.js"></script>
 
     <title>Trello-Mehrdad</title>
@@ -18,63 +22,70 @@
 
 <body>
     <div id="container">
+        <div id="header"> <h3>TrelloClone Mehrdad</h3> </div>
 
-        <div id="header"> <h3>Trello Mehrdad</h3> </div>
-
-        <div class="">
-            <form class="" style="margin-bottom: 2rem;">
+        <div class="formx">
+            <form class="link-div" style="margin-bottom: 2rem;">
                 <input type="text" id="text" placeholder="Enter your task here" />
                 <input type="text" id="description" placeholder="descriptiion here">
                 <input class="date" type="text" id="datepicker">
                 <input type="button" name="AddNewbtn" value="Add" id="submitBtn" />                    
+                <div id="output" id="fragment-1"></div>
             </form>
         </div>
+        
+        <div id="dialog" title="Dialog Title"></div>
 
         <div class="task-list" class="sortable1 connectedSortable" id="pending" style="background: rgb(153,153,153);
         background: linear-gradient(0deg, rgba(153,153,153,1) 0%, rgba(222,207,65,1) 100%);">
             <h2>backlog</h2>
 
-                <ul class="sortable">
-                    <li class="card">Todo ex a1</li>
-                    <li class="card">Todo ex a2</li>
+                <ul class="sortable1 connectedSortable">
+                    <!-- <li class="card">Todo ex 1</li>
+                    <li class="card">Todo ex 2</li> -->
+                    <div class="card_1"></div>
                 </ul>
         </div>
 
         <div class="task-list" class="sortable2  connectedSortable" style="background: rgb(182,158,182);
         background: linear-gradient(0deg, rgba(182,158,182,1) 0%, rgba(188,68,194,1) 100%);">
             <h2>Todo</h2>
-
-                <ul class="sortable"">
-                    <li class="card">Todo ex b1</li>
-                    <li class="card">Todo ex b2</li>
-                    <li class="card">Todo ex b3</li>
-                    <div id="output" id="fragment-1"></div>
+                <!-- <div id="dialog" title="Dialog Title">this is more information</div> -->
+                <ul class="sortable2  connectedSortable" id="tabs">
+                    <!-- <li class="card">Todo ex 1</li>
+                    <li class="card">Todo ex 2</li>
+                    <li class="card">Todo ex 3</li>
+                    <div id="output" id="fragment-1"></div> -->
+                    <div class="card_2"></div>
                 </ul>
         </div>
 
         <div class="task-list" style="background: rgb(182,182,182);
         background: linear-gradient(0deg, rgba(182,182,182,1) 0%, rgba(215,108,54,1) 100%);">
             <h2>Doing</h2>
-                <ul class="sortable">
-                    <li class="card">Todo ex c1</li>
-                    <li class="card">Todo ex c2</li>
+                <ul class="sortable3  connectedSortable">
+                    <!-- <li class="card">Todo ex 1</li>
+                    <li class="card">Todo ex 2</li> -->
+                    <!-- <div id="output" id="fragment-1"></div> -->
                 </ul>
         </div>
 
         <div class="task-list" style="background: rgb(180,178,186);
         background: linear-gradient(0deg, rgba(180,178,186,1) 0%, rgba(75,139,219,1) 100%);">
             <h2>review</h2>
-                <ul class="sortable">
-                    <li class="card">Todo ex d1</li>
-                    <li class="card">Todo ex d2</li>
+                <ul class="sortable4  connectedSortable">
+                    <!-- <li class="card">Todo ex 1</li>
+                    <li class="card">Todo ex 2</li> -->
+                    <!-- <div id="output" id="fragment-1"></div> -->
                 </ul>
         </div>
 
         <div class="task-list" style="background: rgb(153,153,153);
         background: linear-gradient(0deg, rgba(153,153,153,1) 0%, rgba(66,193,74,1) 100%);">
             <h2>Done</h2>
-                <ul class="sortable">
-                    <li class="card">Todo ex e1</li>
+                <ul class="sortable5  connectedSortable">
+                    <!-- <li class="card">Todo ex 1</li> -->
+                    <!-- <div id="output" ></div> -->
                 </ul>
         </div>
     </div>
