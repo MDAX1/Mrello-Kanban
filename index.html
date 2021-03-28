@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
-    <title>Trello clone</title>
+    <link rel="stylesheet" href="lib/Bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/jQuery/jquery.ui.min.css" />
+    <link rel="stylesheet" href="styling/styles.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="js/main.js"></script>
+
+    <title>Trello-Mehrdad</title>
 </head>
+
 <body>
     <header>
         <h1>Trello clone</h1>
     </header>
 
     <div class="input-container container">
-        <input type="text" class="text" value=""/>
-        <input type="button" class="btn" name="" value="Add""/>
+        <input type="text" class="text" value="" />
+        <input type="button" class="btn" name="" value="Add"/>
     </div>
 
-
-    <div class="flex-wrap">
-
-    <div class="container">
-    <h2>Todo</h2>
+        <div class=" sortable1 connectedSortable" id="pending" style="background: rgb(153,153,153);
+        background: linear-gradient(0deg, rgba(153,153,153,1) 0%, rgba(222,207,65,1) 100%);">
+        <h2>backlog</h2>
         <ul class="sortable">
             <li class="card">todo example</li>
         </ul>
     </div>
 
-    <div class="container">
-    <h2>Doing</h2>
+    <div class="task-list" class="sortable2  connectedSortable" style="background: rgb(182,158,182);
+        background: linear-gradient(0deg, rgba(182,158,182,1) 0%, rgba(188,68,194,1) 100%);">
+        <h2>Todo</h2>
         <ul class="sortable">
             <li class="card">todo example</li>
         </ul>
     </div>
 
-    
-    <div class="container">
+    <div class="task-list" style="background: rgb(182,182,182);
+        background: linear-gradient(0deg, rgba(182,182,182,1) 0%, rgba(215,108,54,1) 100%);">
+        <h2>Doing</h2>
+        <ul class="sortable">
+            <li class="card">todo example</li>
+        </ul>
+    </div>
+
+    <div class="task-list" style="background: rgb(180,178,186);
+        background: linear-gradient(0deg, rgba(180,178,186,1) 0%, rgba(75,139,219,1) 100%);">
         <h2>Reviews</h2>
-            <ul class="sortable">
-                <li class="card">todo example</li>
-            </ul>
-        </div>
-
-    <div class="container" id="push-center">
-        <h2>Done</h2>
-            <ul class="sortable">
-                <li class="card">todo example</li>
-            </ul>
+        <ul class="sortable">
+            <li class="card">todo example</li>
+        </ul>
     </div>
-</div>
+
+    <div class="task-list" style="background: rgb(153,153,153);
+        background: linear-gradient(0deg, rgba(153,153,153,1) 0%, rgba(66,193,74,1) 100%);">
+        <h2>Done</h2>
+        <ul class="sortable">
+            <li class="card">todo example</li>
+        </ul>
+    </div>
+    </div>
+
 </body>
+
 </html>
