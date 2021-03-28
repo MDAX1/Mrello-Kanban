@@ -1,44 +1,89 @@
 body {
+
     background: rgb(238, 174, 202) !important;
     background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%) !important;
     border: 0 !important;
 }
 
-header>h1,
-.input-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text {
-    background-color: #fff;
-    border-radius: 7px;
+#container {
+    margin: 0 auto;
+    width: 1060px;
+    min-height: 100%;
+    background-color: transparent;
     border: 0;
-    margin: 0;
-    padding: 0 10px;
+}
+
+.formx {
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-left: 27%;
+}
+
+#header {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: rgb(38, 169, 145);
+    padding: 1rem;
+}
+
+h2 {
+    margin-left: 6rem;
+}
+
+.task-list {
     width: 250px;
-    font-size: 16px;
+    float: left;
+    margin: 5px;
+    background-color: #e3e3e3;
+    min-height: 240px;
+    border-radius: 10px;
+    padding-bottom: 15px;
+}
+
+.task-list input,
+.task-list textarea {
+    width: 240px;
+    margin: 5px;
+}
+
+.task-list input {
+    height: 30px;
+}
+
+.todo-task {
+    border-radius: 5px;
+    background-color: #fff;
+    width: 230px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.task-list input[type="button"] {
+    width: 100px;
+    margin: 5px;
+
+}
+
+.todo-task>.task-header {
+    font-weight: bold;
+}
+
+.todo-task>.task-date {
+    font-size: small;
+    font-style: italic;
+}
+
+.todo-task>.task-description {
+    font-size: smaller;
+}
+
+h3 {
     text-align: center;
 }
 
-.btn {
-    background-color: rgba(225, 225, 225, 0.695);
-    border-radius: 7px;
-    border: 0.5;
-    margin: 0;
-    padding: 0 10px;
-    width: 50px;
-    font-size: 16px;
-    text-align: center;
+.connectedSortable {
+    min-height: 100px;
+    background-color: white;
 
-}
-
-div>.container {
-    margin-left: 10rem;
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
-    border: 11px inset rgba(28, 110, 164, 0.93);
-    border-radius: 25px 25px 25px 25px;
 }
