@@ -5,6 +5,9 @@ body {
     border: 0 !important;
 }
 
+/* background: rgb(188,218,126);
+    background: linear-gradient(0deg, rgba(188,218,126,1) 0%, rgba(253,187,45,1) 100%); */
+
 #container {
     margin: 0 auto;
     width: 1060px;
@@ -79,6 +82,16 @@ h2 {
 }
 
 h3 {
+    text-align: center;
+}
+
+#delete-div {
+    display: none;
+    background-color: #fff;
+    border: 3px dotted #000;
+    margin: 10px;
+    height: 75px;
+    line-height: 75px;
     text-align: center;
 }
 
