@@ -1,91 +1,73 @@
 body {
-
-    background: rgb(238, 174, 202) !important;
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%) !important;
+    background: rgb(238,174,202) !important;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%) !important;
     border: 0 !important;
-}
-
-/* background: rgb(188,218,126);
+  }
+    /* background: rgb(188,218,126);
     background: linear-gradient(0deg, rgba(188,218,126,1) 0%, rgba(253,187,45,1) 100%); */
-
-#container {
+  #container{
     margin: 0 auto;
     width: 1060px;
     min-height: 100%;
     background-color: transparent;
     border: 0;
-}
-
-.formx {
+  }
+  .formx {
     margin-right: auto;
     margin-bottom: 2rem;
     margin-left: 27%;
-}
-
-#header {
+  }
+  #header{
     font-size: 30px;
     text-align: center;
     margin-bottom: 15px;
     color: rgb(38, 169, 145);
     padding: 1rem;
-}
-
-h2 {
+  }
+  h2 {
     margin-left: 6rem;
-}
-
-.task-list {
+  }
+  .task-list{
     width: 250px;
     float: left;
     margin: 5px;
-    background-color: #e3e3e3;
+    background-color: #E3E3E3;
     min-height: 240px;
     border-radius: 10px;
     padding-bottom: 15px;
-}
-
-.task-list input,
-.task-list textarea {
+  }
+  .task-list input, .task-list textarea{
     width: 240px;
     margin: 5px;
-}
-
-.task-list input {
+  }
+  .task-list input{
     height: 30px;
-}
-
-.todo-task {
+  }
+  .todo-task{
     border-radius: 5px;
     background-color: #fff;
     width: 230px;
     margin: 5px;
     padding: 5px;
-}
-
-.task-list input[type="button"] {
+  }
+  .task-list input[type="button"]{
     width: 100px;
     margin: 5px;
-
-}
-
-.todo-task>.task-header {
+  }
+  .todo-task > .task-header{
     font-weight: bold;
-}
-
-.todo-task>.task-date {
+  }
+  .todo-task > .task-date{
     font-size: small;
     font-style: italic;
-}
-
-.todo-task>.task-description {
+  }
+  .todo-task > .task-description{
     font-size: smaller;
-}
-
-h3 {
+  }
+  h3{
     text-align: center;
-}
-
-#delete-div {
+  }
+  #delete-div{
     display: none;
     background-color: #fff;
     border: 3px dotted #000;
@@ -93,10 +75,30 @@ h3 {
     height: 75px;
     line-height: 75px;
     text-align: center;
-}
-
-.connectedSortable {
+  }
+  
+  .connectedSortable{
+    min-height: 200px;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .card {
+    background-color: white;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .white {
+    background-color: white;
+  }
+  
+  /* .connectedSortable {
     min-height: 100px;
     background-color: white;
-
-}
+  
+  } */
