@@ -2,88 +2,169 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js"></script>
-  <title>Trello-Mehrdad</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">     
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scripts.js"></script>
+    <title>Kanban - Mehrdad</title>
 </head>
 
 <body>
-  <div id="container">
-    <div id="header">
-      <h3>Mrello</h3>
-    </div>
-
-    <div id="dialog" title="Basic dialog">
-      <div id="tabs">
-        <ul>
-          <li><a href="#tabs-1">Description</a></li>
-          <li><a href="#tabs-2">Date</a></li>
-          <li><a href="#tabs-3">Title</a></li>
-        </ul>
-        <div id="tabs-1">
-          <p>Description</p>
+    <header style="padding-top: 3rem;">
+        <div>
+            <h1 style="display: flex; align-items: center; justify-content: center;">
+                Welcome To Mrello
+            </h1>
         </div>
-        <div id="tabs-2">
-          <p>Date</p>
+
+        <div>
+            <h5 style="display: flex; align-items: center; justify-content: center; margin: 2rem;">
+                You Can Add Your Task Here
+            </h5>
         </div>
-        <div id="tabs-3">
-          <p>Title</p>
+    </header>
+
+    <!-- New code added start -->
+    <div style="display: none;">
+        <div id="dialog" title="Basic dialog">
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Description</a></li>
+                    <li><a href="#tabs-2">Date</a></li>
+                    <li><a href="#tabs-3">title</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <p>Description</p>
+                </div>
+                <div id="tabs-2">
+                    <p>Date</p>
+                </div>
+                <div id="tabs-3">
+                    <p>title</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+    <!-- New code added end -->
+
+    <div class="container mt-3">
+        <form>
+            <div class="input-group mb-3">
+                <input type="text" id="text" class="form-control" placeholder="Tasks">
+                <input type="text" id="description" class="form-control" placeholder="Description">
+                <input type="text" id="datepicker" class="form-control" placeholder="Date">
+                <div class="input-group-prepend">
+                    <button type="button" id="submitBtn" class="btn btn-primary" data-toggle="button"
+                        aria-pressed="false" autocomplete="off">
+                        Add
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
 
-    <div class="formx">
-      <form class="link-div" style="margin-bottom: 2rem;">
-        <input type="text" id="text" placeholder="Enter your task here" />
-        <input type="text" id="description" placeholder="descriptiion here">
-        <input class="date" type="text" id="datepicker">
-        <input type="button" name="AddNewbtn" value="Add" id="submitBtn" />
-        <div id="output" id="fragment-1"></div>
-      </form>
-    </div>
-    <div class="task-list" class="sortable1 connectedSortable" id="pending" style="background: rgb(153,153,153);
-        background: linear-gradient(0deg, rgba(153,153,153,1) 0%, rgba(222,207,65,1) 100%);">
-      <h2>backlog</h2>
-      <ul class="sortable1 connectedSortable">
+    <div class="container py-5">
+        <div class="row">
 
-      </ul>
-    </div>
-    <div class="task-list" class="sortable2  connectedSortable" style="background: rgb(182,158,182);
-        background: linear-gradient(0deg, rgba(182,158,182,1) 0%, rgba(188,68,194,1) 100%);">
-      <h2>Todo</h2>
-      <!-- <div id="dialog" title="Dialog Title">this is more information</div> -->
-      <ul class="sortable2 connectedSortable" id="tabs">
+            <!-- Start lane 1 -->
+            <div class="col-12 col-lg-4">
+                <div class="card mb-3">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-1">
+                            Backlog
+                        </h3>
+                        <small class="mb-0 text-muted">
+                            Write a list of tasks that leads to your plan
+                        </small>
+                    </div>
 
-      </ul>
-    </div>
-    <div class="task-list" style="background: rgb(182,182,182);
-        background: linear-gradient(0deg, rgba(182,182,182,1) 0%, rgba(215,108,54,1) 100%);">
-      <h2>Doing</h2>
-      <ul class="sortable3 connectedSortable">
+                    <div class="card-body">
+                        <div class="tasks" id="backlog">
+                            <div class="card mb-3">
+                                <img class="card-img-top" src="https://source.unsplash.com/zNRITe8NPqY/400x200"
+                                    alt="Bootstrap Kanban Board" />
+                            </div>
+                            <div class="task-list" class="sortable1 connectedSortable" id="pending">
+                                <ul class="sortable1 connectedSortable">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End lane 1 -->
 
-      </ul>
-    </div>
-    <div class="task-list" style="background: rgb(180,178,186);
-        background: linear-gradient(0deg, rgba(180,178,186,1) 0%, rgba(75,139,219,1) 100%);">
-      <h2>review</h2>
-      <ul class="sortable4 connectedSortable">
+            <!-- Start lane 2 -->
+            <div class="col-12 col-lg-4">
+                <div class="card mb-3">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-1">
+                            In Progress
+                        </h3>
+                        <small class="mb-0 text-muted">
+                            Move your tasks here when you begin
+                        </small>
+                    </div>
+                    <div class="card-body">
+                        <div class="tasks" id="progress">
+                            <div class="card mb-3">
+                                <img class="card-img-top" src="https://source.unsplash.com/zNRITe8NPqY/400x200"
+                                    alt="Bootstrap Kanban Board" />
+                            </div>
+                            <div class="task-list" class="sortable2 connectedSortable" id="pending">
+                                <ul class="sortable2 connectedSortable" id="tabs">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End lane 2 -->
 
-      </ul>
-    </div>
-    <div class="task-list" style="background: rgb(153,153,153);
-        background: linear-gradient(0deg, rgba(153,153,153,1) 0%, rgba(66,193,74,1) 100%);">
-      <h2>Done</h2>
-      <ul class="sortable5  connectedSortable">
+            <!-- Start lane 3 -->
+            <div class="col-12 col-lg-4">
+                <div class="card mb-3">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-1">
+                            Completed
+                        </h3>
+                        <small class="mb-0 text-muted">
+                            Move your tasks here when your done
+                        </small>
+                    </div>
 
-      </ul>
+                    <div class="card-body">
+                        <div class="tasks" id="completed">
+                            <div class="card mb-3">
+                                <img class="card-img-top" src="https://source.unsplash.com/zNRITe8NPqY/400x200"
+                                    alt="Bootstrap Kanban Board" />
+                            </div>
+                            <div class="task-list" class="sortable3 connectedSortable" id="pending">
+                                <ul class="sortable3 connectedSortable">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End lane 3 -->
+
+        </div>
     </div>
-  </div>
+
+    <footer class="text-center text-white" style=" background: rgb(238,174,202) !important;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%) !important;">
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright:
+            <a class="text-dark" href="https://github.com/MDAX1">Github</a>
+        </div>
+    </footer>
+
 </body>
-
 </html>
