@@ -1,108 +1,225 @@
 body {
-  background: rgb(238,174,202) !important;
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%) !important;
-  border: 0 !important;
+    background: rgb(238, 174, 202) !important;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%) !important;
+    border: 0 !important;
 }
-  /* background: rgb(188,218,126);
+
+
+/* background: rgb(188,218,126);
   background: linear-gradient(0deg, rgba(188,218,126,1) 0%, rgba(253,187,45,1) 100%); */
-#container{
-  margin: 0 auto;
-  width: 1060px;
-  min-height: 100%;
-  background-color: transparent;
-  border: 0;
+
+#container {
+    margin: 0 auto;
+    width: 1060px;
+    min-height: 100%;
+    background-color: transparent;
+    border: 0;
 }
 
-#header{
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 15px;
-  color: rgb(38, 169, 145);
-  padding-top: 3rem;
+#header {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: rgb(38, 169, 145);
+    padding-top: 3rem;
 }
 
-.task-list{
-  width: 250px;
+.task-list {
+    /* width: 250px;
   float: left;
   margin: 5px;
   background-color: #E3E3E3;
   min-height: 240px;
   border-radius: 10px;
-  padding-bottom: 15px;
-}
-.task-list input, .task-list textarea{
-  width: 240px;
-  margin: 5px;
-}
-.task-list input{
-  height: 30px;
-}
-.todo-task{
-  border-radius: 5px;
-  background-color: #fff;
-  width: 230px;
-  margin: 5px;
-  padding: 5px;
-}
-.task-list input[type="button"]{
-  width: 100px;
-  margin: 5px;
-}
-.todo-task > .task-header{
-  font-weight: bold;
-}
-.todo-task > .task-date{
-  font-size: small;
-  font-style: italic;
-}
-.todo-task > .task-description{
-  font-size: smaller;
-}
-h3, h1, h5 {
-  text-align: center;
+  padding-bottom: 15px; */
+    width: 100%;
+    float: left;
+    margin-top: 8px;
+    background-color: #E3E3E3;
+    min-height: 240px;
+    border-radius: 10px;
+    padding-bottom: 15px;
 }
 
-.connectedSortable{
-  min-height: 200px;
+.task-list input,
+.task-list textarea {
+    width: 240px;
+    margin: 5px;
+}
+
+.task-list input {
+    height: 30px;
+}
+
+.todo-task {
+    border-radius: 5px;
+    background-color: #fff;
+    width: 230px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.task-list input[type="button"] {
+    width: 100px;
+    margin: 5px;
+}
+
+.open-button {
+    width: 52px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4694d2;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 1px lightgrey;
+    position: relative;
+    float: right;
+    margin-right: 4px;
+    padding-top: 0px;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.done {
+    margin-left: 4px;
+    width: 50px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4694d2;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 1px lightgrey;
+    position: relative;
+    float: right;
+    margin-right: 4px;
+    padding-top: 0px;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.todo-task>.task-header {
+    font-weight: bold;
+}
+
+.todo-task>.task-date {
+    font-size: small;
+    font-style: italic;
+}
+
+.todo-task>.task-description {
+    font-size: smaller;
+}
+
+h3,
+h1,
+h5 {
+    text-align: center;
+}
+
+.connectedSortable {
+    min-height: 200px;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
+    border-radius: 8px;
+    padding: 16px;
 }
 
-.task-list{
-  background-color: transparent;
+.task-list {
+    background-color: #8d8eb242;
+    /* background-color: transparent; */
 }
 
 .card {
-  background-color: white;
+    background-color: white;
+    margin-bottom: 5px;
 }
 
 .green {
-  background-color: green;
+    background-color: rgb(36, 214, 102);
 }
 
 .white {
-  background-color: white;
+    background-color: #c8d1ebf2;
+    /* background-color: white; */
+    margin-bottom: 5px;
+    padding-left: 5px;
 }
 
-  
-  /* .connectedSortable {
+
+/* .connectedSortable {
     min-height: 100px;
     background-color: white;
   
   } */
 
-  html,
-  body {
-      background: #e9ecef;
-  }
+html,
+body {
+    background: #e9ecef;
+}
 
-  .cursor-grab {
-      cursor: -webkit-grab;
-      cursor: grab;
-  }
+.cursor-grab {
+    cursor: -webkit-grab;
+    cursor: grab;
+}
 
-  .tasks {
-      min-height: 450px;
-  }
+.tasks {
+    min-height: 450px;
+}
+
+li.card.white #text {
+    margin-right: 4px;
+    background-color: red;
+}
+
+#dialog {
+    width: 80%;
+}
+
+
+/*  COLORS  */
+
+.red {
+    background-color: rgba(255, 85, 85, 0.727);
+    padding-left: 5px;
+}
+
+.green {
+    background-color: rgb(89 255 164 / 62%);
+    padding-left: 5px;
+}
+
+.blue {
+    background-color: rgb(62, 62, 248);
+    padding-left: 5px;
+}
+
+.cyan {
+    background-color: rgb(48, 156, 156);
+    padding-left: 5px;
+}
+
+span.circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    margin: 1em;
+}
+
+.btn:active,
+.active {
+    color: rgb(155, 155, 155) !important;
+    /* background-color: green !important;
+  border-color: green !important; */
+}
